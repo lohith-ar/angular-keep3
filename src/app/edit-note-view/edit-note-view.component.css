@@ -1,0 +1,5 @@
+  
+.keep-c-note-edit-container{
+	display: flex;
+	flex-direction: column;
+}

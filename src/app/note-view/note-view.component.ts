@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Note } from '../note';
+import { NotesService } from '../services/notes.service';
 
 @Component({
   selector: 'app-note-view',
@@ -8,4 +10,15 @@ import { Component } from '@angular/core';
 export class NoteViewComponent {
 
   notes: Array<Note>;
+  constructor(private notesService: NotesService) {
+    this.notes = [];
+  }
+
+  ngOnInit() {
+    this.notesService.getNotes().subscribe(
+      res => this.notes = res,
+      err => { }
+    );
+  }
+
 }
