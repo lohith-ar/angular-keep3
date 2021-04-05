@@ -55,7 +55,6 @@ const appRoutes: Routes = [
     EditNoteViewComponent,
     EditNoteOpenerComponent,
     NoteTakerComponent],
-    
   imports: [BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
